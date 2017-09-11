@@ -1,0 +1,155 @@
+{
+  "exercises" : {
+    "1" : "Dumbbell Bench Press",
+    "2" : "Bench Press",
+    "3" : "Incline Dumbbell Bench Press",
+    "4" : "Cable Chest Fly",
+    "5" : "Weighted Push-Up",
+    "6" : "Jacknife Sit-Up"
+  },
+  "w_1" : {
+    "e_1" : {
+      "name": "exercises_1",
+      "reps": {
+        "s_1": 10,
+        "s_2": 10,
+        "s_3": 10,
+        "s_4": 8
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+    "e_2" : {
+      "name": "exercises_3",
+      "reps": {
+        "s_1": 10,
+        "s_2": 10,
+        "s_3": 10,
+        "s_4": 8
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+    "e_3" : {
+      "name": "exercises_4",
+      "reps": {
+        "s_1": 10,
+        "s_2": 10,
+        "s_3": 10,
+        "s_4": 8
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+    "e_4" : {
+      "name": "exercises_5",
+      "reps": {
+        "s_1": 10,
+        "s_2": 10,
+        "s_3": 10,
+        "s_4": 10
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+    "e_5" : {
+      "name": "exercises_6",
+      "reps": {
+        "s_1": 10,
+        "s_2": 10,
+        "s_3": 10,
+        "s_4": 10
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    }
+  },
+  "w_2" : {
+    "e_1": {
+      "name": "exercises_1",
+      "reps": {
+        "s_1": 10,
+        "s_2": 10,
+        "s_3": 8,
+        "s_4": 8
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+  },
+  "w_3" : {
+    "e_1": {
+      "name": "exercises_2",
+      "reps": {
+        "s_1": 10,
+        "s_2": 8,
+        "s_3": 8,
+        "s_4": 6
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+  },
+  "w_4" : {
+    "e_1": {
+      "name": "exercises_2",
+      "reps": {
+        "s_1": 10,
+        "s_2": 8,
+        "s_3": 6,
+        "s_4": 6
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+  },
+  "w_5" : {
+    "e_1": {
+      "name": "exercises_2",
+      "reps": {
+        "s_1": 10,
+        "s_2": 8,
+        "s_3": 6,
+        "s_4": 6,
+        "s_5": 6
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+  },
+  "w_6" : {
+    "e_1": {
+      "name": "exercises_2",
+      "reps": {
+        "s_1": 8,
+        "s_2": 6,
+        "s_3": 6,
+        "s_4": 6,
+        "s_5": 6
+      },
+      "rest": "90 seconds",
+      "wu_1": {
+        "sets": 1
+      }
+    },
+  },
+  "title": "Chest"
+}
