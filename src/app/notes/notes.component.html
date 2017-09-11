@@ -1,0 +1,63 @@
+<p>
+  notes works!
+</p>
+<div class="text" *ngFor="let note of notes | async">
+  <h2>{{ note.title }}</h2>
+  <form (ngSubmit)="onSubmit()" #programForm="ngForm">
+    <table class="table table-responsive">
+      <tbody>
+      <tr *ngFor="let exercise of note.exercises; let i = index">
+        <td>
+          {{ exercise.title }}
+
+          <!--todo show child row-->
+          <!--<div *ngIf="exercise.child_cols">-->
+            <!--{{ exercise.child_cols[i].title }}-->
+          <!--</div>-->
+        </td>
+        <td *ngFor="let col of exercise.cols; let j = index">
+          <span *ngIf="editRowValues != [i]" >{{ col }}</span>
+          <input *ngIf="editRowValues == [i]" class="form-control" value="{{ col }}" #rowCol (blur)="rowCols[j].$value = rowCol.value" (keyup.enter)="rowCols[j].$value = rowCol.value">
+
+          <!--todo show child row-->
+          <!--<div *ngIf="exercise.child_cols">-->
+            <!--{{ exercise.child_cols[i].cols[j] }}-->
+          <!--</div>-->
+
+          <!--todo add child row-->
+          <!--<input *ngIf="addChildRowValues == [i]" class="form-control" placeholder="Enter Text - {{ i }}">-->
+        </td>
+        <td>
+
+          <span *ngIf="editRowValues != [i]" class="btn btn-default btn-sm" (click)="editRow(note.$key, i)">+ Edit Row</span>
+          <span *ngIf="editRowValues == [i]" class="btn btn-default btn-sm" (click)="saveRow(note.$key, i)">+ Save Row</span>
+          <span *ngIf="editRowValues == [i]" class="btn btn-default btn-sm">+ Cancel</span>
+
+          <!--todo add child row-->
+          <!--<span *ngIf="addChildRowValues == [i]" class="btn btn-default btn-sm">+ Cancel Add Child</span>-->
+          <!--<span *ngIf="addChildRowValues != [i]" class="btn btn-default btn-sm" (click)="addChildRow(i)">+ Child Row</span>-->
+
+          <span class="btn btn-default btn-sm">- Delete Row</span>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td>
+          <input class="form-control" type="text" id="row-title" required #rowTitle name="row-title" placeholder="New Title">
+        </td>
+        <td *ngFor="let col of note.exercises[0].cols; let j = index">
+          <input class="form-control" placeholder="Row Col-{{ j }}" name="rowCol_{{ j }}" #rowCol (blur)="rowCols[j] = rowCol.value" (keyup.enter)="rowCols[j] = rowCol.value"><br>
+        </td>
+        <td>
+          <input type="hidden" id="notes-count" #notesKey value="{{ note.$key }}">
+          <input type="hidden" id="rows-count" #rowsCount value="{{ note.exercises.length }}">
+          <button type="submit" class="btn btn-default btn-sm" (click)="createNewRow(notesKey.value, rowsCount.value, rowTitle.value)">+ Save New Row</button>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </form>
+  <span class="btn btn-default btn-sm">+ Add Columns</span>
+  <span class="btn btn-default btn-sm">+ Duplicate Note</span>
+</div>
