@@ -1,0 +1,13 @@
+<div class="form-container" id="toolbar">
+
+    <header [@fallIn]="state">
+        <button (click)="logout()" class="basic-btn">Logout</button>
+    </header>
+
+    <div id="page" [@moveInLeft]="state">
+        <h2>Hey {{ name.auth.email }}!</h2>
+        <h3>{{ name.auth.uid }}!</h3>
+    </div>
+
+    <a href="/members/programs">Programs</a>
+</div>
